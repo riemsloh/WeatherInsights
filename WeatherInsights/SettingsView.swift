@@ -1,3 +1,11 @@
+//
+//  SettingsView.swift
+//  WeatherInsights
+//
+//  Created by Olaf Lueg on 01.06.25.
+//
+
+
 import SwiftUI
 
 struct SettingsView: View {
@@ -22,12 +30,10 @@ struct SettingsView: View {
                     .font(.headline)
                 TextField("Ihr X-RapidAPI-Key für Meteostat", text: $meteostatAPIKey)
                     .textFieldStyle(.roundedBorder)
-                    .autocapitalization(.none) // Schlüssel sind oft case-sensitive
                     .disableAutocorrection(true)
 
                 TextField("Ihr X-RapidAPI-Host für Meteostat (z.B. meteostat.p.rapidapi.com)", text: $meteostatAPIHost)
                     .textFieldStyle(.roundedBorder)
-                    .autocapitalization(.none)
                     .disableAutocorrection(true)
             }
 
@@ -38,12 +44,10 @@ struct SettingsView: View {
                     .font(.headline)
                 TextField("Ihr Weather Underground API Key", text: $wuAPIKey)
                     .textFieldStyle(.roundedBorder)
-                    .autocapitalization(.none)
                     .disableAutocorrection(true)
 
                 TextField("Ihre Weather Underground Station ID (z.B. IMELLE143)", text: $wuStationID)
                     .textFieldStyle(.roundedBorder)
-                    .autocapitalization(.allCharacters) // IDs sind oft GROSS
                     .disableAutocorrection(true)
             }
 
